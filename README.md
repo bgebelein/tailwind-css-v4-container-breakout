@@ -41,12 +41,12 @@ setScrollbarWidth();
 
 The `container-breakout.css` stylesheet introduces the following 6 new utility classes:
 
-- mx-break-out
-- ml-break-out
-- mr-break-out
-- px-break-out
-- pl-break-out
-- pr-break-out
+- `mx-break-out`
+- `ml-break-out`
+- `mr-break-out`
+- `px-break-out`
+- `pl-break-out`
+- `pr-break-out`
 
 You can use them like this:
 
