@@ -5,9 +5,12 @@
   "author": "Bent Gebelein (https://github.com/bgebelein)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bgebelein/tailwind-css-v4-container-breakout.git"
+    "url": "git+https://github.com/bgebelein/tailwind-css-v4-container-breakout.git"
   },
-  "keywords": ["Tailwind", "Container breakout"],
+  "keywords": [
+    "Tailwind",
+    "Container breakout"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bgebelein/tailwind-css-v4-container-breakout/issues"
