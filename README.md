@@ -12,19 +12,19 @@ Import the `container-breakout.css` in your stylesheet.
 
 Or copy its content to your stylesheet.
 
-## ⚠️ Important
+### Set Scrollbar Width
 
-The `container-breakout.css` uses the CSS custom property `--scrollbar-width` to calculate the correct margin/padding for each breakout utility class. Therefore it is absolutely necessary to set this property in your document.
+The `container-breakout.css` uses a CSS custom property `--cbo-scrollbar-width` to calculate the correct margin/padding for each breakout utility class. **Therefore it is absolutely necessary to set this property in your document.**
 
-Since the width of scrollbars can defer, i recommend adding the following script to your page to set the `--scrollbar-width` property dynamically:
+Since the width of scrollbars can defer, i recommend adding the following script to your page to set the `--cbo-scrollbar-width` property dynamically:
 
 ```JavaScript
 const getScrollbarWidth = () => {
-    const prevWidth = document.getAttribute("data-scrollbar-width") || 0;
-    const newWidth = window.innerWidth - document.body.clientWidth;
+    const prevWidth = document.body.style.getPropertyValue("--cbo-scrollbar-width");
+    const newWidth = `${window.innerWidth - document.body.clientWidth}px`;
 
     if (newWidth !== prevWidth) {
-        document.setAttribute("style", "--scrollbar-width:" + newWidth + "px;");
+        document.body.setAttribute("style", "--cbo-scrollbar-width:" + newWidth);
     }
 };
 
@@ -37,7 +37,7 @@ const setScrollbarWidth = () => {
 setScrollbarWidth();
 ```
 
-## Usage
+## Basic Usage
 
 The `container-breakout.css` stylesheet introduces the following 6 new utility classes:
 
@@ -70,11 +70,46 @@ You can also use Tailwind CSS viewports in combination with the container breako
 </div>
 ```
 
-## Customization
+## Advanced Usage / Customization
 
-The `container-breakout.css` is set to work with default Tailwind CSS viewports and default padding for the `.container` class.
+It is very likely, that you customized your container to have some inline padding.
 
-If you customized the viewport breakpoints or `.container` padding in your stylesheet, you will have to adjust the `container-breakout.css` accordingly.
+If you do so, in order for the calculations to be correct, you have to overwrite the following variables to match your containers inline padding inside your `@theme{ ... }` function:
 
-## Visualization
+```CSS
+@theme {
+    --cbo-padding-x: ... ;
+    --cbo-padding-x-sm: ... ;
+    --cbo-padding-x-md: ... ;
+    --cbo-padding-x-lg: ... ;
+    --cbo-padding-x-xl: ... ;
+    --cbo-padding-x-2xl: ... ;
+}
+```
 
+### Example
+
+```CSS
+@utility container {
+  padding: 0 1rem;
+
+  @variant md {
+    padding: 0 1.5rem;
+  }
+}
+
+@theme {
+    --cbo-padding-x: 1rem;
+    --cbo-padding-x-sm: 1rem;
+    --cbo-padding-x-md: 1.5rem;
+    --cbo-padding-x-lg: 1.5rem;
+    --cbo-padding-x-xl: 1.5rem;
+    --cbo-padding-x-2xl: 1.5rem;
+}
+```
+
+⚠️ **Important:** Note, that due to the mobile first approach of Tailwind CSS, a customization for one breakpoint will also take effect on all following / bigger breakpoints.
+
+## Demo
+
+https://play.tailwindcss.com/pX1ZE5Lubu?layout=horizontal&file=css
