@@ -1,6 +1,6 @@
 # tailwind-css-v4-container-breakout
 
-A Tailwind CSS v4 plugin for container breakout utility classes.
+A Tailwind CSS v4 plugin/stylesheet for container breakout utility classes.
 
 ## Installation
 
