@@ -1,10 +1,18 @@
 @theme {
+  --cbo-scrollbar-width: 0px;
+
   --cbo-padding-x: 0rem;
   --cbo-padding-x-sm: 0rem;
   --cbo-padding-x-md: 0rem;
   --cbo-padding-x-lg: 0rem;
   --cbo-padding-x-xl: 0rem;
   --cbo-padding-x-2xl: 0rem;
+
+  --cbo-max-width-sm: var(--breakpoint-sm);
+  --cbo-max-width-md: var(--breakpoint-md);
+  --cbo-max-width-lg: var(--breakpoint-lg);
+  --cbo-max-width-xl: var(--breakpoint-xl);
+  --cbo-max-width-2xl: var(--breakpoint-2xl);
 }
 
 @utility container {
@@ -12,22 +20,27 @@
 
   @variant sm {
     padding-inline: var(--cbo-padding-x-sm);
+    max-width: var(--cbo-max-width-sm);
   }
 
   @variant md {
     padding-inline: var(--cbo-padding-x-md);
+    max-width: var(--cbo-max-width-md);
   }
 
   @variant lg {
     padding-inline: var(--cbo-padding-x-lg);
+    max-width: var(--cbo-max-width-lg);
   }
 
   @variant xl {
     padding-inline: var(--cbo-padding-x-xl);
+    max-width: var(--cbo-max-width-xl);
   }
 
   @variant 2xl {
     padding-inline: var(--cbo-padding-x-2xl);
+    max-width: var(--cbo-max-width-2xl);
   }
 }
 
@@ -35,23 +48,23 @@
   margin-inline: calc(var(--cbo-padding-x) * -1);
 
   @variant sm {
-    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-sm) / 2 - var(--cbo-padding-x-sm));
+    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-sm) / 2 - var(--cbo-padding-x-sm));
   }
 
   @variant md {
-    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-md) / 2 - var(--cbo-padding-x-md));
+    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-md) / 2 - var(--cbo-padding-x-md));
   }
 
   @variant lg {
-    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-lg) / 2 - var(--cbo-padding-x-lg));
+    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-lg) / 2 - var(--cbo-padding-x-lg));
   }
 
   @variant xl {
-    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-xl) / 2 - var(--cbo-padding-x-xl));
+    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-xl) / 2 - var(--cbo-padding-x-xl));
   }
 
   @variant 2xl {
-    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-2xl) / 2 - var(--cbo-padding-x-2xl));
+    margin-inline: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-2xl) / 2 - var(--cbo-padding-x-2xl));
   }
 }
 
@@ -59,23 +72,23 @@
   margin-left: calc(var(--cbo-padding-x) * -1);
 
   @variant sm {
-    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-sm) / 2 - var(--cbo-padding-x-sm));
+    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-sm) / 2 - var(--cbo-padding-x-sm));
   }
 
   @variant md {
-    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-md) / 2 - var(--cbo-padding-x-md));
+    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-md) / 2 - var(--cbo-padding-x-md));
   }
 
   @variant lg {
-    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-lg) / 2 - var(--cbo-padding-x-lg));
+    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-lg) / 2 - var(--cbo-padding-x-lg));
   }
 
   @variant xl {
-    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-xl) / 2 - var(--cbo-padding-x-xl));
+    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-xl) / 2 - var(--cbo-padding-x-xl));
   }
 
   @variant 2xl {
-    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-2xl) / 2 - var(--cbo-padding-x-2xl));
+    margin-left: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-2xl) / 2 - var(--cbo-padding-x-2xl));
   }
 }
 
@@ -83,23 +96,23 @@
   margin-right: calc(var(--cbo-padding-x) * -1);
 
   @variant sm {
-    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-sm) / 2 - var(--cbo-padding-x-sm));
+    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-sm) / 2 - var(--cbo-padding-x-sm));
   }
 
   @variant md {
-    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-md) / 2 - var(--cbo-padding-x-md));
+    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-md) / 2 - var(--cbo-padding-x-md));
   }
 
   @variant lg {
-    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-lg) / 2 - var(--cbo-padding-x-lg));
+    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-lg) / 2 - var(--cbo-padding-x-lg));
   }
 
   @variant xl {
-    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-xl) / 2 - var(--cbo-padding-x-xl));
+    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-xl) / 2 - var(--cbo-padding-x-xl));
   }
 
   @variant 2xl {
-    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--breakpoint-2xl) / 2 - var(--cbo-padding-x-2xl));
+    margin-right: calc((-100vw + var(--cbo-scrollbar-width)) / 2 + var(--cbo-max-width-2xl) / 2 - var(--cbo-padding-x-2xl));
   }
 }
 
@@ -107,23 +120,23 @@
   padding-inline: var(--cbo-padding-x);
 
   @variant sm {
-    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-sm) / 2 + var(--cbo-padding-x-sm));
+    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-sm) / 2 + var(--cbo-padding-x-sm));
   }
 
   @variant md {
-    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-md) / 2 + var(--cbo-padding-x-md));
+    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-md) / 2 + var(--cbo-padding-x-md));
   }
 
   @variant lg {
-    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-lg) / 2 + var(--cbo-padding-x-lg));
+    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-lg) / 2 + var(--cbo-padding-x-lg));
   }
 
   @variant xl {
-    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-xl) / 2 + var(--cbo-padding-x-xl));
+    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-xl) / 2 + var(--cbo-padding-x-xl));
   }
 
   @variant 2xl {
-    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-2xl) / 2 + var(--cbo-padding-x-2xl));
+    padding-inline: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-2xl) / 2 + var(--cbo-padding-x-2xl));
   }
 }
 
@@ -131,23 +144,23 @@
   padding-left: var(--cbo-padding-x);
 
   @variant sm {
-    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-sm) / 2 + var(--cbo-padding-x-sm));
+    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-sm) / 2 + var(--cbo-padding-x-sm));
   }
 
   @variant md {
-    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-md) / 2 + var(--cbo-padding-x-md));
+    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-md) / 2 + var(--cbo-padding-x-md));
   }
 
   @variant lg {
-    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-lg) / 2 + var(--cbo-padding-x-lg));
+    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-lg) / 2 + var(--cbo-padding-x-lg));
   }
 
   @variant xl {
-    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-xl) / 2 + var(--cbo-padding-x-xl));
+    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-xl) / 2 + var(--cbo-padding-x-xl));
   }
 
   @variant 2xl {
-    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-2xl) / 2 + var(--cbo-padding-x-2xl));
+    padding-left: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-2xl) / 2 + var(--cbo-padding-x-2xl));
   }
 }
 
@@ -155,22 +168,22 @@
   padding-right: var(--cbo-padding-x);
 
   @variant sm {
-    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-sm) / 2 + var(--cbo-padding-x-sm));
+    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-sm) / 2 + var(--cbo-padding-x-sm));
   }
 
   @variant md {
-    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-md) / 2 + var(--cbo-padding-x-md));
+    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-md) / 2 + var(--cbo-padding-x-md));
   }
 
   @variant lg {
-    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-lg) / 2 + var(--cbo-padding-x-lg));
+    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-lg) / 2 + var(--cbo-padding-x-lg));
   }
 
   @variant xl {
-    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-xl) / 2 + var(--cbo-padding-x-xl));
+    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-xl) / 2 + var(--cbo-padding-x-xl));
   }
 
   @variant 2xl {
-    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--breakpoint-2xl) / 2 + var(--cbo-padding-x-2xl));
+    padding-right: calc((100vw - var(--cbo-scrollbar-width)) / 2 - var(--cbo-max-width-2xl) / 2 + var(--cbo-padding-x-2xl));
   }
 }
