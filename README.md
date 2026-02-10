@@ -113,3 +113,7 @@ If you do so, in order for the calculations to be correct, you have to overwrite
 ## Demo
 
 https://play.tailwindcss.com/pX1ZE5Lubu?layout=horizontal&file=css
+
+## Buy me a coffee
+
+https://buymeacoffee.com/bgebelein
