@@ -1,7 +1,7 @@
 {
   "name": "tailwind-css-v4-container-breakout",
   "description": "A Tailwind CSS v4 plugin/stylesheet for container breakout utility classes.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Bent Gebelein (https://github.com/bgebelein)",
   "repository": {
     "type": "git",
